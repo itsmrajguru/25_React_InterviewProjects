@@ -1,9 +1,15 @@
-// import { createContext } from "react";
+
+//HOW TO USE CONTEXT -->
+
+// create a Context
+// provide a state to Context
+// set State in the main.jsx
+// Use state as a consumer
 
 import { createContext, useEffect, useState } from "react";
 
-//create a Context
 
+//create a Context
 export const ShoppingCartContext=createContext(null)
 
 //provide a state to Context
