@@ -1,10 +1,49 @@
 import './App.css'
+import AccordianComponent from './components/1_Acoordian'
+import GenerateRandomColor from './components/2_randomColor'
+import StarRatingComponent from './components/3_StarRating'
+import ImageSliderComponent from './components/4_ImageSlider'
+import LoadMoreComponent from './components/5_LoadMoreButton'
+import TreeMenu from './components/6_TreeView'
+import QRCodeGenerator from './components/7_QRCodeGenerator'
 
 function App() {
   return (
     <>
-    <h1>Mangesh Rajguru is Here...</h1>
-    <h2>He is best programmer in the World...</h2>
+      <h1 style={{ fontWeight: "900" }}>25 React Projects By Mangesh Rajguru</h1>
+
+      <div className="projects-container">
+{/* 
+        <div className="outline">
+          <AccordianComponent /></div>
+
+        <div className="outline">
+          <GenerateRandomColor /></div>
+
+        <div className="outline">
+          <StarRatingComponent noofStars={15} /></div>
+
+        <div className="outline">
+          <ImageSliderComponent
+            url="https://picsum.photos/v2/list"
+            page={1}
+            limit={10} /></div> */}
+
+          {/* <div className="outline">
+            <LoadMoreComponent/>
+          </div> */}
+
+          {/* <div className="outline">
+            <TreeMenu/></div> */}
+
+          {/* <div className="outline">
+            <QRCodeGenerator/>
+          </div> */}
+
+          <div className="outline">
+            {/* </> */}
+          </div>
+      </div>
     </>
   )
 }
