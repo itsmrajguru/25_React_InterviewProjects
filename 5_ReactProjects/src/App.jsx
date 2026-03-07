@@ -13,13 +13,13 @@ function App() {
       <h1 style={{ fontWeight: "900" }}>25 React Projects By Mangesh Rajguru</h1>
 
       <div className="projects-container">
-{/* 
+
         <div className="outline">
           <AccordianComponent /></div>
 
         <div className="outline">
           <GenerateRandomColor /></div>
-
+``
         <div className="outline">
           <StarRatingComponent noofStars={15} /></div>
 
@@ -27,18 +27,18 @@ function App() {
           <ImageSliderComponent
             url="https://picsum.photos/v2/list"
             page={1}
-            limit={10} /></div> */}
+            limit={10} /></div>
 
-          {/* <div className="outline">
+          <div className="outline">
             <LoadMoreComponent/>
-          </div> */}
+          </div>
 
-          {/* <div className="outline">
-            <TreeMenu/></div> */}
+          <div className="outline">
+            <TreeMenu/></div>
 
-          {/* <div className="outline">
+          <div className="outline">
             <QRCodeGenerator/>
-          </div> */}
+          </div>
 
           <div className="outline">
             {/* </> */}
