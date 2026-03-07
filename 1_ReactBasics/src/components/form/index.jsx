@@ -1,24 +1,29 @@
+import { use } from "react";
 import { useState } from "react";
 
 export function FormComponent() {
 
     //METHOD 1-SINGLE STATE OBJECT (RECOMMEDED)
-
+    const[name,setName]=useState("")
+    const[email,setEmail]=useState("")
+    
     //defining empty form box
-    const[formData,setFormData]=useState({
-        name:"",
-        email:""
-    })
+    // const[formData,setFormData]=useState({
+    //     name:"",
+    //     email:""
+    // })
 
     //handlign form data dynamically
     function HandleChanges(event){
-        const {name, value}=event.target;
+    //     const {name, value}=event.target;
 
-        setFormData({
-            ...formData,
-            [name]:value
-        })
-        console.log(formData)
+    //     setFormData({
+    //         ...formData,
+    //         [name]:value
+    //     })
+    //     console.log(formData)
+    setName(event.target.value)
+    // setEmail(event.target.value)
     }
 
     //handling submit changes
@@ -40,6 +45,7 @@ export function FormComponent() {
                         value={formData.name}
                         id="name"
                         placeholder="Enter your name"
+                        //without onchane, we cant type a single lette rin the input box
                         onChange={HandleChanges} />  {/* this function is handles all changes in the form */}
 
                     <input
