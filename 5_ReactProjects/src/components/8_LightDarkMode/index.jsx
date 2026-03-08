@@ -2,9 +2,11 @@
 
 function LightDarkMode() {
     return (
-        <div>
-            <h1>Light-Dark Mode Switch</h1>
-            
+        <div className="ligth-dark-mode">
+            <div className="container">
+                <h1>Light-Dark Mode Switch</h1>
+                <button>Change Theme</button>
+            </div>
         </div>
     );
 }

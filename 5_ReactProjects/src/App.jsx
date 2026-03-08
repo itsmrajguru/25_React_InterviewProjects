@@ -6,20 +6,23 @@ import ImageSliderComponent from './components/4_ImageSlider'
 import LoadMoreComponent from './components/5_LoadMoreButton'
 import TreeMenu from './components/6_TreeView'
 import QRCodeGenerator from './components/7_QRCodeGenerator'
+import LightDarkMode from './components/8_LightDarkMode'
+import ScrollIndicator from './components/9_scroll-indicator'
 
 function App() {
+  
   return (
     <>
       <h1 style={{ fontWeight: "900" }}>25 React Projects By Mangesh Rajguru</h1>
 
       <div className="projects-container">
 
-        <div className="outline">
+        {/* <div className="outline">
           <AccordianComponent /></div>
 
         <div className="outline">
           <GenerateRandomColor /></div>
-``
+
         <div className="outline">
           <StarRatingComponent noofStars={15} /></div>
 
@@ -41,8 +44,12 @@ function App() {
           </div>
 
           <div className="outline">
-            {/* </> */}
+            <LightDarkMode/>
           </div>
+
+          <div className="outline">
+            <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+          </div> */}
       </div>
     </>
   )
