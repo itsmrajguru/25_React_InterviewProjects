@@ -1,4 +1,5 @@
 import './App.css'
+import ModalTest from './components/11_CustomModal'
 import AccordianComponent from './components/1_Acoordian'
 import GenerateRandomColor from './components/2_randomColor'
 import StarRatingComponent from './components/3_StarRating'
@@ -50,6 +51,10 @@ function App() {
           <div className="outline">
             <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
           </div> */}
+
+          <div className="outline">
+            <ModalTest/>
+          </div>
       </div>
     </>
   )
