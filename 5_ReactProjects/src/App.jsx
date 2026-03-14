@@ -1,5 +1,6 @@
 import './App.css'
 import ModalTest from './components/11_CustomModal'
+import GithubProfileFinder from './components/12_GithubProfileFinder'
 import AccordianComponent from './components/1_Acoordian'
 import GenerateRandomColor from './components/2_randomColor'
 import StarRatingComponent from './components/3_StarRating'
@@ -18,7 +19,7 @@ function App() {
 
       <div className="projects-container">
 
-        {/* <div className="outline">
+        <div className="outline">
           <AccordianComponent /></div>
 
         <div className="outline">
@@ -50,10 +51,14 @@ function App() {
 
           <div className="outline">
             <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
-          </div> */}
+          </div>
 
           <div className="outline">
             <ModalTest/>
+          </div>
+
+          <div className="outline">
+            <GithubProfileFinder/>
           </div>
       </div>
     </>
