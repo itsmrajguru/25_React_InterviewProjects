@@ -1,62 +1,59 @@
-// import { useState } from "react";
-// import SignUpComponent from "../../components/auth/sign-up";
-// import SignInComponent from "../../components/auth/sign-in";
-
-// function AuthPage() {
-//     const [isLoginView, setLoginView] = useState(true)
-
-//     function handleToggle() {
-//         setLoginView(!isLoginView)
-//     }
-//     return (
-//         <div>
-//             <div>
-//                 { isLoginView ? <SignInComponent /> : <SignUpComponent />}
-//             </div>
-//             <div>
-//                 <button onClick={handleToggle}>
-//                     { isLoginView ? "SignUp" : "SignIn"}
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// }
-// export default AuthPage;
-
-
+// AuthPage.jsx
 import { useState } from "react";
 import SignUpComponent from "../../components/auth/sign-up";
 import SignInComponent from "../../components/auth/sign-in";
-import CommonButtonComponent from "@/components/common-button";
 
 function AuthPage() {
     const [isLoginView, setIsLoginView] = useState(true);
 
-    function handleToggle() {
-        setIsLoginView(!isLoginView);
-    }
-
     return (
-        <div className="flex flex-auto flex-col min-h-screen h-full">
-            <div className="flex h-full flex-col justify-center items-center bg-white">
-                <h3 className="text-3xl font-bold">Welcome</h3>
-                <div className="mt-4">
-                    {isLoginView ? <SignInComponent /> : <SignUpComponent />}
-                </div>
-                <div className="mt-5">
-                    <CommonButtonComponent
-                        type={'button'}
-                        onClick={handleToggle}
-                        disabled={false}
-                        buttonText={isLoginView ? "Sign Up" : "Sign In"}
-                    />
-                    {/* <CommonButtonComponent
-                        type={'button'}
-                        onClick={handleToggle}
-                        disabled={false}
-                        buttonText={isLoginView ? "Sign Up" : "Sign In"}
-                    /> */}
-                </div>
+        <div style={{
+            minHeight: "100svh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "1.5rem 1rem",
+            background: "var(--bg)",
+        }}>
+            <div className="card" style={{
+                width: "100%",
+                maxWidth: "420px",
+                padding: "2.5rem 2rem",
+                textAlign: "left",
+            }}>
+                <h2 style={{ marginBottom: "6px" }}>
+                    {isLoginView ? "Welcome back" : "Create an account"}
+                </h2>
+
+                {isLoginView ? <SignInComponent /> : <SignUpComponent />}
+
+                <p style={{
+                    textAlign: "center",
+                    fontSize: "14px",
+                    color: "var(--text)",
+                    marginTop: "1.5rem",
+                }}>
+                    {isLoginView ? "Don't have an account?" : "Already have an account?"}
+                    {" "}
+                    <button
+                        type="button"
+                        onClick={() => setIsLoginView(p => !p)}
+                        style={{
+                            background: "none",
+                            border: "none",
+                            padding: 0,
+                            fontSize: "14px",
+                            fontWeight: 500,
+                            color: "var(--brand)",
+                            cursor: "pointer",
+                            textDecoration: "underline",
+                            textUnderlineOffset: "3px",
+                        }}
+                    >
+                        {isLoginView ? "Sign up" : "Login"}
+                    </button>
+                </p>
+
             </div>
         </div>
     );

@@ -1,20 +1,50 @@
+/* app.css */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--brand);
+  background: var(--brand-bg);
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
 
   &:hover {
-    border-color: var(--accent-border);
+    border-color: var(--brand-border);
   }
   &:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--brand);
     outline-offset: 2px;
   }
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  @media (max-width: 1024px) {
+    padding: 24px 20px;
+  }
+}
+
+.icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: var(--brand-bg);
+  border: 1px solid var(--brand-border);
 }
 
 .hero {
@@ -78,8 +108,20 @@
   & > div {
     flex: 1 1 0;
     padding: 32px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    margin: 16px 8px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: box-shadow 0.25s ease;
+
+    &:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
     @media (max-width: 1024px) {
       padding: 24px 20px;
+      margin: 8px 0;
     }
   }
 
@@ -92,6 +134,8 @@
   @media (max-width: 1024px) {
     flex-direction: column;
     text-align: center;
+    border-top: none;
+    padding: 0 16px;
   }
 }
 
@@ -100,7 +144,6 @@
 
   @media (max-width: 1024px) {
     border-right: none;
-    border-bottom: 1px solid var(--border);
   }
 }
 
@@ -118,18 +161,21 @@
   a {
     color: var(--text-h);
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--social-bg);
+    border: 1px solid var(--border);
     display: flex;
     padding: 6px 12px;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
 
     &:hover {
       box-shadow: var(--shadow);
+      border-color: rgba(0, 0, 0, 0.12);
     }
+
     .button-icon {
       height: 18px;
       width: 18px;
@@ -156,6 +202,7 @@
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
+
   @media (max-width: 1024px) {
     height: 48px;
   }
@@ -177,6 +224,7 @@
     left: 0;
     border-left-color: var(--border);
   }
+
   &::after {
     right: 0;
     border-right-color: var(--border);
