@@ -260,7 +260,7 @@ function CommonForm({ formControls = [], handleSubmit, form, btnText }) {
 
                 {formControls.map((controlItem) => {
                     const fieldError = errors?.[controlItem.id]?.message;
-                    const registration = form.register(controlItem.id);
+                    const registration = form.register(controlItem.id, controlItem.rules);
 
                     return (
                         <FieldWrapper

@@ -5,6 +5,7 @@ import ScrumBoardPage from './pages/scrum-board'
 import TasksPage from './pages/tasks'
 import NotFoundPage from './pages/NotFoundPage'
 import CommonLayout from './components/common-layout'
+import { Toaster } from './components/ui/sonner'
 
 function App() {
 
@@ -12,13 +13,15 @@ function App() {
     <>
       {/*adding Routes */}
       <Routes>
-        <Route path="/" element={<CommonLayout />}>
-          <Route path="" element={<AuthPage />}></Route>
-          <Route path="board" element={<ScrumBoardPage />}></Route>
-          <Route path="tasks" element={<TasksPage/>}></Route>
+        <Route path="/auth" element={<AuthPage />}></Route>
+        <Route path="/tasks" element={<CommonLayout />}>
+          <Route path="list" element={<TasksPage />} />
+          <Route path="scrum-board" element={<ScrumBoardPage />} />
         </Route>
-        <Route path="*" element={<NotFoundPage/>}></Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
+
+      <Toaster />
     </>
   )
 }

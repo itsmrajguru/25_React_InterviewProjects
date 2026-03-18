@@ -1,7 +1,7 @@
 import CommonForm from "@/components/common-form";
-import { useToast } from "@/components/ui/use-toast";
 import { signUpFormControls } from "@/config";
 import { callRegisterUserApi } from "@/services";
+import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +14,6 @@ function SignUp() {
     },
   });
 
-  const { toast } = useToast();
   const navigate = useNavigate();
 
   async function handleSubmit(getData) {
@@ -23,18 +22,17 @@ function SignUp() {
     console.log(data, "data");
 
     if (data?.success) {
-      toast({
-        title: "User register successful",
-        description: "Welcome",
+      toast.success("User register successful", {
+        description: "Welcome to the project",
       });
       navigate("/tasks/list");
     } else {
-      toast({
-        title: "Error",
-        description: "Some error occured",
+      toast.error("Error", {
+        description: data?.message || "Some error occured",
       });
     }
   }
+
 
   return (
     <div>

@@ -17,7 +17,7 @@ Need ?--> Without this the requests and responses between the frontend and backe
 const cors=require('cors')
 app.use(
     cors({
-        origin:['http://localhost:5173/'],  // I allow requests comming from this url
+        origin:['http://localhost:5173'],  // I allow requests comming from this url
         methods:['GET','POST','PUT','DELETE'], //I allow these HTTP methods comming from frontend
         credentials:true   //I allow the cookies to be sent cross-origin
     })
@@ -25,8 +25,8 @@ app.use(
 
 /* cookie parser actually helps to convert the string format cookie
 into the redable JWT token format */
-
-
+const cookieParser=require('cookie-parser') 
+app.use(cookieParser())
 
 /*this automated middleware converts the json format data into
 JavaScript Object format, so that it can be used very easily...*/
@@ -39,7 +39,7 @@ connectToDB()
 
 // importing Router
 const userRouter = require('./routes/user-routes')
-const cookieParser = require('cookie-parser')
+
 app.use('/api/user/',userRouter)
 
 //Initilizing Welcome Route

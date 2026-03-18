@@ -230,3 +230,25 @@
     border-right-color: var(--border);
   }
 }
+
+/* ── Toast Styles ── */
+.toast-title {
+  font-family: var(--sans) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--bg) !important;
+  line-height: 1.4 !important;
+}
+
+.toast-description {
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--bg) !important;
+  opacity: 0.75 !important;
+  margin-top: 1px !important;
+}
+
+[data-sonner-toaster] {
+  width: 260px !important;
+}

@@ -11,6 +11,7 @@ export const signUpFormControls = [
     placeholder: "Enter your name",
     componentType: "input",
     type: "text",
+    rules: { required: "Name is required" },
   },
   {
     id: "email",
@@ -18,6 +19,7 @@ export const signUpFormControls = [
     placeholder: "Enter your email",
     componentType: "input",
     type: "email",
+    rules: { required: "Enter correct email" },
   },
   {
     id: "password",
@@ -25,6 +27,7 @@ export const signUpFormControls = [
     placeholder: "Enter your password",
     componentType: "input",
     type: "password",
+    rules: { required: "Password is required", minLength: { value: 4, message: "Password must contain at least 4 characters" } },
   },
 ];
 
@@ -35,6 +38,7 @@ export const signInFormControls = [
     placeholder: "Enter your email",
     componentType: "input",
     type: "email",
+    rules: { required: "Enter correct email" },
   },
   {
     id: "password",
@@ -42,5 +46,6 @@ export const signInFormControls = [
     placeholder: "Enter your password",
     componentType: "input",
     type: "password",
+    rules: { required: "Password is required", minLength: { value: 4, message: "Password must contain at least 4 characters" } },
   },
 ];
