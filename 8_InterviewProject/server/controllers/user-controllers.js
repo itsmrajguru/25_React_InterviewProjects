@@ -30,13 +30,13 @@ const generateToken = (id) => {
 
 const registerUser = async (req, res, next) => {
 
-    //Getting user credentials from the frontend
+    //lets get the  user credentials from the frontend
     const { name, email, password } = await req.body
 
-    //validating the credentials
+    //Now we need to validate the credentials
     const { error } = registerSchema.validate({ name, email, password })
 
-    //error returns an array with error messages
+    // this error keyword actually returns an array with error messages
     if (error) {
         return res.status(400).json({
             success: false,

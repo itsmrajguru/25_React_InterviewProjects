@@ -39,8 +39,9 @@ connectToDB()
 
 // importing Router
 const userRouter = require('./routes/user-routes')
-
+const taskRouter=require('./routes/task-routes')
 app.use('/api/user/',userRouter)
+app.use('/api/task/',taskRouter)
 
 //Initilizing Welcome Route
 app.get('/api', (req, res) => {
